@@ -51,7 +51,7 @@ const fetchForecasts = address => dispatch => {
       .then(json => {
           console.log('latlong:', json);
           dispatch(receiveLocation(address, json))
-        return fetch(`http://weather-proxy/weather/${json.Lat}/${json.Long}/${Math.round((new Date()).valueOf()/1000)}`)
+        return fetch(`http://35.185.112.225/weather/${json.Lat}/${json.Long}/${Math.round((new Date()).valueOf()/1000)}`)
           .then(response => response.json())
           .then(json => {
               console.log('weather:', json);
