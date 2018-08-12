@@ -35,7 +35,7 @@ export const receiveLocation = (address, json) => ({
 export const setPosition = (lat, long) => dispatch => {
     let address = 'Current Location'
     dispatch(selectAddress(address))
-    return fetch(`http://weather-proxy/weather/${lat}/${long}/${Math.round((new Date()).valueOf()/1000)}`)
+    return fetch(`http://35.185.112.225/weather/${lat}/${long}/${Math.round((new Date()).valueOf()/1000)}`)
       .then(response => response.json())
       .then(json => {
           console.log('setPosweather:', json);
